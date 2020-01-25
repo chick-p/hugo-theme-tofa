@@ -1,0 +1,20 @@
+{
+  "name": "hugo-theme-tofa",
+  "version": "0.1.0",
+  "description": "Tofa is a HUGO theme template.",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/chick-p/hugo-theme-tofa.git"
+  },
+  "keywords": ["HUGO"],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chick-p/hugo-theme-tofa/issues"
+  },
+  "homepage": "https://github.com/chick-p/hugo-theme-tofa#readme"
+}
