@@ -1,0 +1,9 @@
+{{ hugo.Generator }}
+<meta charset="utf-8">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{{- $options:= dict "targetPath" "css/style.css" "enableSourceMap" true "outputStyle" "compressed" }}
+{{- $style := resources.Get "scss/style.scss" | resources.ToCSS ($options) }}
+<link rel="stylesheet" href="{{ $style.Permalink }}">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=notosansjp|Quicksand:300,400,500,700|Montserrat&amp;display=swap">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">

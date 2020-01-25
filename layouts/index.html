@@ -1,0 +1,21 @@
+{{ define "main" }}
+<div class="p-index__categories">
+    {{- range .Site.Taxonomies.categories.Alphabetical }}
+    <div class="p-index__categories--item">
+        <a href="{{ .Page.Permalink }}">{{- .Page.Title }} ({{ .Count }})</a>
+    </div>
+    {{ end }}
+</div>
+<div class="p-index">
+    {{- range .Site.RegularPages.ByDate.Reverse }}
+    <article class="p-index__item">
+    <a href="{{ .Permalink }}">
+        <div class="p-index__item--thumbnail">
+        </div>
+        <h1 class="p-index__item--title">{{ .Title }}</h1>
+        <p class="p-index__item--date">{{ .Date.Format ( .Site.Params.dateformat | default "2006-01-02") }}</p>
+    </a>
+    </article>
+    {{ end }}
+</div>
+{{ end }}
