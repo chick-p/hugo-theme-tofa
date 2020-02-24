@@ -19,8 +19,11 @@ pygmentsoptions = "linenos=inline"
 enableInlineShortcodes = true
 footnoteReturnLinkContents = "^"
 
+enableEmoji = true
+
 [Params]
   description = "This is a HUGO theme."
+  defaultEmoji = ":custard:"
 
 [Params.author]
   name = "chick-p"
@@ -35,6 +38,7 @@ footnoteReturnLinkContents = "^"
   category = "categories"
   tag = "tags"
   series = "series"
+  archive = "archives"
 
 [Params.social]
   twitter = "_chick_p"
