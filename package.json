@@ -10,7 +10,9 @@
     "type": "git",
     "url": "git+ssh://git@github.com/chick-p/hugo-theme-tofa.git"
   },
-  "keywords": ["HUGO"],
+  "keywords": [
+    "HUGO"
+  ],
   "author": "",
   "license": "MIT",
   "bugs": {
