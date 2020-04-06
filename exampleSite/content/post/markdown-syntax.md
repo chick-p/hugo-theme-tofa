@@ -14,7 +14,9 @@ categories = [
     "syntax",
 ]
 series = ["Themes Guide"]
+archives = ["2019-03"]
 aliases = ["migrate-from-jekyl"]
+emoji = ":orange_book:"
 +++
 
 This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.
@@ -130,8 +132,8 @@ html
 #### Nested list
 
 * Item
-1. First Sub-item
-2. Second Sub-item
+    1. First Sub-item
+    2. Second Sub-item
 
 ## Other Elements — abbr, sub, sup, kbd, mark
 

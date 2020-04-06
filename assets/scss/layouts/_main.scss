@@ -1,0 +1,9 @@
+main {
+  max-width: $content-width;
+  padding: 60px 20px;
+  margin: auto;
+
+  @include tablet {
+    padding: 28px 20px;
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "hugo-theme-tofa",
+  "version": "0.1.0",
+  "description": "Tofa is a HUGO theme template.",
+  "private": true,
+  "scripts": {
+    "lint:style": "stylelint assets/scss/**/*.scss"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/chick-p/hugo-theme-tofa.git"
+  },
+  "keywords": ["HUGO"],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chick-p/hugo-theme-tofa/issues"
+  },
+  "homepage": "https://github.com/chick-p/hugo-theme-tofa#readme",
+  "dependencies": {
+    "stylelint": "^13.0.0",
+    "stylelint-config-recess-order": "^2.0.3",
+    "stylelint-config-standard": "^19.0.0",
+    "stylelint-scss": "^3.13.0"
+  }
+}

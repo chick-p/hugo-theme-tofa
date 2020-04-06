@@ -1,50 +1,48 @@
-baseURL = "https://gohugo.io"
-title = "Hugo Themes"
-author = "Steve Francia"
-copyright = "Copyright © 2008–2019, Steve Francia and the Hugo Authors; all rights reserved."
+baseURL = "https://example.com"
+title = "Tofa"
+author = "chick-p"
+copyright = "Copyright � 2020, chick-p and the Hugo Authors; all rights reserved."
 paginate = 3
-languageCode = "en"
-DefaultContentLanguage = "en"
+languageCode = "ja"
+DefaultContentLanguage = "ja"
+themesDir = "../.."
+theme = "hugo-theme-tofa"
+
+hasCJKLanguage = true
+summaryLength = 50
+
+pygmentscodefences = true
+pygmentsCodeFencesGuessSyntax = true
+pygmentsStyle = "monokai"
+pygmentsoptions = "linenos=inline"
+
 enableInlineShortcodes = true
 footnoteReturnLinkContents = "^"
 
-[menu]
+enableEmoji = true
 
-  [[menu.main]]
-    identifier = "about"
-    name = "About"
-    url = "/about/"
-    weight = 10
+[Params]
+  description = "This is a HUGO theme."
+  defaultEmoji = ":custard:"
+
+[Params.author]
+  name = "chick-p"
+  description = "This is author description"
+
+[sitemap]
+  changefreq = "daily"
+  filename = "sitemap.xml"
+  priority = 0.5
 
 [taxonomies]
-category = "categories"
-tag = "tags"
-series = "series"
+  category = "categories"
+  tag = "tags"
+  series = "series"
+  archive = "archives"
 
-[privacy]
+[Params.social]
+  twitter = "_chick_p"
+  github = "chick-p"
 
-  [privacy.vimeo]
-    disabled = false
-    simple = true
-
-  [privacy.twitter]
-    disabled = false
-    enableDNT = true
-    simple = true
-
-  [privacy.instagram]
-    disabled = false
-    simple = true
-
-  [privacy.youtube]
-    disabled = false
-    privacyEnhanced = true
-
-[services]
-
-  [services.instagram]
-    disableInlineCSS = true
-
-  [services.twitter]
-    disableInlineCSS = true
-
+[outputFormats.rss]
+  baseName = "atom"

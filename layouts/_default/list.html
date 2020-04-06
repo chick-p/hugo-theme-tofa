@@ -1,0 +1,24 @@
+{{ define "main" }}
+<div class="p-list">
+    {{- range .Paginator.Pages.ByDate.Reverse }}
+    <article class="p-item">
+        <h1 class="p-item__title">{{ .Title }}</h1>
+        <div class="p-item__meta">
+            <span><i class="far fa-calendar-alt"></i> {{ .Date.Format ( .Site.Params.dateformat | default "2006-01-02") }}</span>
+            {{- with .Params.categories }}
+            <span><i class="fas fa-folder"></i>
+            {{- range .}}
+            <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}/" rel="category">{{ . }}</a>
+            {{ end -}}
+        {{ end -}}
+        </div>
+        <div class="p-item__summary">
+        {{ .Summary | plainify | truncate 200 }}
+        </div>
+        <div class="p-item__readmore">
+            <a href="{{ .RelPermalink }}" tabindex="0">more...</a>
+        </div>
+    </article>
+    {{ end }}
+</div>
+{{ end }}

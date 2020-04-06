@@ -1,0 +1,48 @@
+{{ define "main" }}
+<article>
+    <nav>
+        <ol class="o-breadcrumbs">{{ template "breadcrumb" (dict "node" . "start" .) }}</ol>
+    </nav>
+    <div class="p-post">
+        <h1 class="p-post__title">{{ .Title }}</h1>
+        <div class="p-post__meta">
+        <span><i class="far fa-calendar-alt"></i> {{ .Date.Format ( .Site.Params.dateformat | default "2006-01-02") }}</span>
+        {{- with .Params.categories }}
+            <span><i class="fas fa-folder"></i>
+            {{- range .}}
+            <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}/" rel="category">{{ . }}</a>
+            {{ end -}}
+        {{ end -}}
+    </span>
+        </div>
+        <div class="p-post__content">{{ .Content }}</div>
+        <nav>
+            <div class="p-post__tags">
+                {{ range .Params.tags }}
+                <div class="p-post__tags--item"><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}/" rel="tag">#{{ . }}</a></div>
+                {{ end }}
+            </div>
+        </nav>
+    </div>
+
+{{- with .Site.Params.author }}
+<aside>
+    <div class="p-post__author">
+        {{ with .name }}<div>Author: {{ . }}</div>{{ end }}
+        {{ with .description }}<div>Description: {{ . }}</div>{{ end }}
+    </div>
+</aside>
+{{ end }}
+</article>
+{{ end }}
+
+{{- define "breadcrumb" }}
+    {{- if .node.Parent }}
+        {{ template "breadcrumb" (dict "node" .node.Parent "start" .start) }}
+    {{- else if not .node.IsHome }}
+        {{ template "breadcrumb" (dict "node" .node.Site.Home "start" .start) }}
+    {{- end }}
+    {{- if eq .node .start }}<li>{{ .node.LinkTitle }}
+    {{- else }}<li><a href="{{ .node.Permalink }}">{{ if eq .node.LinkTitle "" }}Home{{ else }}{{ .node.LinkTitle }}{{ end }}</a>
+    {{- end }}
+{{- end }}

@@ -1,0 +1,7 @@
+<div class="l-header">
+    <div class="l-header__title"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></div>
+    <div class="l-header__description">{{ with .Site.Params.description }}{{ . }}{{ end }}</div>
+    <div class="l-header__social">
+        {{- partial "social.html" . -}}
+    </div>
+</div>

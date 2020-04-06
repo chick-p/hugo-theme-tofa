@@ -1,0 +1,36 @@
+.p-nav {
+  padding: 1rem 0;
+
+  a {
+    color: $tapioca-color;
+    text-decoration: none;
+
+    &:hover {
+      color: $gion-color;
+    }
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+    list-style: none;
+  }
+}
+
+.p-nav__title {
+  margin-bottom: 1rem;
+}
+
+.p-nav__tags {
+  text-align: left;
+  word-wrap: break-word;
+
+  ul {
+    display: inline;
+  }
+
+  li {
+    display: inline-block;
+    margin: 0 0.5rem 0.5rem 0;
+    list-style: none;
+  }
+}

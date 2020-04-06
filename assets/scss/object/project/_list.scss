@@ -1,0 +1,62 @@
+.p-item {
+  margin-bottom: 60px;
+
+  @include tablet {
+    margin-bottom: 28px;
+  }
+}
+
+.p-item__title {
+  font-weight: 800;
+}
+
+.p-item__meta {
+  margin: 12px 0;
+  font-size: 90%;
+
+  span {
+    margin-right: 0.5em;
+  }
+
+  a {
+
+    &:hover {
+      color: $bean-color;
+    }
+  }
+
+}
+
+.p-item__summary {
+  margin-bottom: 20px;
+}
+
+.p-item__readmore {
+  text-align: right;
+  a {
+    display: inline-block;
+    padding: 5px 12px;
+    color: $base-color;
+    text-decoration: none;
+    background-color: $tofu-color;
+    border: 1px solid $grey;
+    border-radius: 20px;
+
+    &:visited {
+      color: inherit;
+    }
+
+    &:hover {
+      color: $white;
+      cursor: pointer;
+      background-color: $tertiary-color;
+      border: 1px solid $tertiary-color;
+    }
+
+    &:active {
+      color: $white;
+      cursor: pointer;
+      background-color: $tertiary-color;
+    }
+  }
+}
