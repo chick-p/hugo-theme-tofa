@@ -1,5 +1,6 @@
 {{ hugo.Generator }}
 <meta charset="utf-8">
+<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
 <link rel="shortcut icon" href="/favicon.ico">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 {{- $options:= dict "targetPath" "css/style.css" "enableSourceMap" true "outputStyle" "compressed" }}
