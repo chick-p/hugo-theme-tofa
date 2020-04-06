@@ -1,0 +1,25 @@
+<div class="p-nav p-nav__recents">
+  <h2 class="p-nav__title">Recent Posts</h2>
+  <ul>
+  {{ range first 5 .Site.RegularPages.ByDate.Reverse }}
+    <li><a href=".RelPermalink">{{ .Title }} ({{ dateFormat "2006-01-02" .Date }})</a></li>
+  {{ end }}
+  </ul>
+</div>
+<div class="p-nav p-nav__tags">
+  <h2 class="p-nav__title">Tags</h2>
+  <ul>
+  {{ range .Site.Taxonomies.tags.Alphabetical }}
+    <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}({{ .Count }})</a></li>
+  {{ end }}
+  </ul>
+</div>
+
+<div class="p-nav p-nav__archives">
+  <h2 class="p-nav__title">Archives</h2>
+  <ul>
+  {{ range .Site.Taxonomies.archives.Alphabetical.Reverse }}
+    <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a></li>
+  {{ end }}
+  </ul>
+</div>
