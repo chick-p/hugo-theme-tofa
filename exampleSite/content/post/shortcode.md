@@ -15,3 +15,21 @@ archives = ["2020-06"]
 ## img
 
 {{< img src="/img/cat.jpg" alt="ねこ" width="600">}}
+
+## note
+
+{{< note type="information" >}}
+表示したいコメント
+{{< /note >}}
+
+{{< note type="tips" >}}
+表示したいコメントです。
+
+- 箇条書き
+  - 箇条書き
+
+{{< /note >}}
+
+{{< note type="warning" >}}
+表示したいコメント
+{{< /note >}}
