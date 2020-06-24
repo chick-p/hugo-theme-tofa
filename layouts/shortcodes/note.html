@@ -1,0 +1,18 @@
+{{ if not ( .Get "type" ) }}
+  {{ errorf "missing value for param 'type': %s" .Position }}
+{{ end }}
+{{ $type := ( .Get "type" ) }}
+<div class="c-note c-note--{{ $type }}">
+  <div class="c-note__mark">
+    {{ if eq $type "information" }}
+      <i class="fa fa-info-circle" title="INFOMATION"></i>
+    {{ else if eq $type  "tips" }}
+      <i class="fas fa-lightbulb" title="TIPS"></i>
+    {{ else if eq $type "warning" }}
+      <i class="fas fa-exclamation-triangle"></i>
+    {{ end }}
+  </div>
+  <div class="c-note__text">
+    {{ .Inner | markdownify }}
+  </div>
+</div>

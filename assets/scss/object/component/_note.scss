@@ -1,0 +1,33 @@
+.c-note {
+  display: flex;
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  line-height: 1.2;
+  border-radius: 5px;
+
+  &--information {
+    color: #2b4f4d;
+    background-color: #b5d7d5;
+  }
+
+  &--tips {
+    color: #345c31;
+    background-color: #b7d7b5;
+  }
+
+  &--warning {
+    color: #4f3b2b;
+    background-color: #eec53e;
+  }
+
+  &__mark {
+    display: inline-block;
+    margin: 0 12px 0 0;
+    vertical-align: top;
+  }
+
+  &__text {
+    display: inline-block;
+  }
+}
