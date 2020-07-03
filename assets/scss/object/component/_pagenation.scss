@@ -1,0 +1,28 @@
+// _pagenation.scss
+
+.c-pagination {
+  margin: 12px 0 0;
+  font-size: 0.9rem;
+  text-align: center;
+
+  ul {
+    list-style-type: none;
+  }
+
+  li {
+    display: inline-block;
+    padding: 0 4px;
+
+    .disabled {
+      text-decoration: none;
+      pointer-events: none;
+      cursor: text;
+    }
+  }
+
+  a {
+    &:hover {
+      color: $bean-color;
+    }
+  }
+}
